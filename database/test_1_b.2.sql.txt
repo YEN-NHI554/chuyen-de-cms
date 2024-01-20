@@ -1,0 +1,15 @@
+Trần Thị Yến Nhi Đề 2
+2. Liệt kê danh sách mua hàng của user bao gồm giá tiền của mỗi đơn hàng, thông tin
+hiển thị gồm: mã user, tên user, mã đơn hàng, tổng tiền
+Lời giải 
+SELECT
+    User.user_id AS ma_user,
+    User.user_name AS ten_user,
+    Orders.order_id AS ma_don_hang,
+    SUM(O.order_id) AS tong_tien
+FROM
+    Users User
+JOIN
+    Orders ON User.user_id = Oders.user_id
+GROUP BY
+    User.user_id, User.user_name, Oders.order_id;
