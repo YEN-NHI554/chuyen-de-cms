@@ -1,0 +1,6 @@
+Trần Thị Yến Nhi Đề 2 
+a.2sql:  Lấy ra danh sách khách hàng theo thứ tự tên theo Alphabet (A->Z), trong đó Tên
+khách hàng có chữ a hoặc bắt đầu bằng chữ m, chiều dài email từ 5 đến 20 ký tự
+(>=5, <=20). Thông tin hiển thị gồm: Mã khách hàng, Tên khách hàng, Email.
+câu lời giải sql: 
+SELECT user_id, user_name, user_email FROM users WHERE ( (LOWER(user_name) LIKE '%a%' OR LOWER(user_name) LIKE 'm%') AND LENGTH(user_email) BETWEEN 5 AND 20 ) ORDER BY user_name ASC;
