@@ -10,7 +10,8 @@
         <br>
         Chiều rộng: <input type="text" name="width" value="<?php echo isset($_POST['width']) ? $_POST['width'] : ''; ?>">
         <br>
-        <input type="submit" name="submit" value="Tính diện tích">
+        <input type="submit" name="submit" value="Diện tích">
+        <input type="text" name="width" value="<?php echo isset($_POST['width']) ? $_POST['width'] : ''; ?>">
     </form>
 
     <?php
